@@ -3,6 +3,7 @@ import employeeManagmentSystem.Employee
 import employeeManagmentSystem.Manager
 
 fun main() {
+
     // Bank Account
     val bankAccount = BankAccountClass(accountNumber = "1", balance = 2.3, customerName = "Demis Lavrentidis")
     bankAccount.deposit(10.0)
@@ -20,7 +21,14 @@ fun main() {
     println(manager.calculateBonus())
     println(manager.id)
 
-    val manager2 = Manager(name = "Rey", salary = 3000.0)
-    println(manager2.calculateBonus())
-    println(manager2.id)
+    val managerTwo = Manager(name = "Rey Rey", salary = 3000.0)
+    println(managerTwo.calculateBonus())
+    println(managerTwo.id)
+
+    // Bonus task
+    val employees = listOf(employee, manager, managerTwo)
+    employees.forEach {
+        println("Employee name: ${it.name}, Employee id: ${it.id}, Employee bonus: ${it.calculateBonus()}")
+    }
+
 }

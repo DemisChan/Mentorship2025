@@ -4,6 +4,7 @@ open class Employee(val name: String, val id: Int, val salary: Double) {
     init {
         require(id >= 0)
     }
+
     open fun calculateBonus() = salary * 0.1
 
     companion object {
@@ -15,6 +16,10 @@ open class Employee(val name: String, val id: Int, val salary: Double) {
     }
 }
 
-class Manager(salary: Double, name: String): Employee(salary = salary, name = name, id = generateUniqueId()) {
+class Manager(salary: Double, name: String) : Employee(salary = salary, name = name, id = generateUniqueId()) {
     override fun calculateBonus(): Double = salary * 0.2
+}
+
+class Developer(salary: Double, name: String) : Employee(salary = salary, name = name, id = generateUniqueId()) {
+    override fun calculateBonus(): Double = salary * 0.15
 }

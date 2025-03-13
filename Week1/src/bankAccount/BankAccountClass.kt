@@ -1,3 +1,5 @@
+package bankAccount
+
 class BankAccountClass(val accountNumber: String, var balance: Double, val customerName: String) :
     SavingsAccount(interestRate = 0.0) {
     override fun withdraw(amount: Double) {

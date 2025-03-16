@@ -11,8 +11,8 @@ fun removeDuplicates(list: List<Int>): List<Int> {
 
 fun removeDuplicatesManual(list: List<Int>): List<Int> {
     val result = mutableListOf<Int>()
-    for(i in list) {
-        if(i !in result) {
+    for (i in list) {
+        if (i !in result) {
             result.add(i)
         }
     }
@@ -21,19 +21,18 @@ fun removeDuplicatesManual(list: List<Int>): List<Int> {
 
 // Task 2
 fun sumNonAdjacentElements(list: List<Int>): Int {
-    var sumEven  = 0
+    var sumEven = 0
     var sumOdd = 0
     val indList = list.indices.toList()
     for (i in indList) {
-        if( i% 2 == 0) {
+        if (i % 2 == 0) {
             sumEven += list[i]
-        }
-        else {
+        } else {
             sumOdd += list[i]
         }
     }
     sumEven.compareTo(sumOdd).apply {
-        return if(this == 1) {
+        return if (this == 1) {
             sumEven
         } else {
             sumOdd

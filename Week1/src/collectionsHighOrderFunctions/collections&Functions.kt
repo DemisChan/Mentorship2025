@@ -2,12 +2,14 @@ package collectionsHighOrderFunctions
 
 // create list of integers
 val numbers = listOf(3, 5, 3, 8, 9, 10, 7)
+val numbers2 = listOf(1, 2, 2, 3, 3, 4)
 
 // Task 1
 fun removeDuplicates(list: List<Int>): List<Int> {
 
     return list.distinct()
 }
+
 
 fun removeDuplicatesManual(list: List<Int>): List<Int> {
     val result = mutableListOf<Int>()
@@ -40,6 +42,27 @@ fun sumNonAdjacentElements(list: List<Int>): Int {
     }
 }
 
+// Task 3
+fun numberOfOccurrences(list: List<Int>): Map<Int, Int> {
+    val result = mutableMapOf<Int, Int>()
+    for (i in list) {
+        result[i] = list.count { it == i }
+    }
+    return result
+}
+
+// Task 4
+fun textToUppercase(list: List<String>): List<String> {
+    return list.map { it.uppercase() }
+}
+
+// Task 5
+fun mergedAndSorted(list1: List<Int>, list2: List<Int>): List<Int> {
+    return list1.plus(list2).sortedDescending().reversed()
+
+}
+
+
 fun main() {
     // task 1
     println(removeDuplicates(numbers))
@@ -47,6 +70,15 @@ fun main() {
 
     // task 2
     println(sumNonAdjacentElements(numbers))
+
+    //task 3
+    println(numberOfOccurrences(numbers2))
+
+    //task 4
+    println(textToUppercase(listOf("hello", "world", "kotlin")))
+
+    //task 5
+    println(mergedAndSorted(numbers, numbers2))
 }
 
 

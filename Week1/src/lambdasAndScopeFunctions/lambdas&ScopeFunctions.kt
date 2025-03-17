@@ -36,10 +36,37 @@ fun stringLength(str: String): Int = str.run {
     }
 }
 
+// task 3
+/*Question: Write a function that takes a list of numbers, multiplies each number by 2, and prints each
+intermediate result using the also scope function for debugging purposes. Finally, return the transformed list.
+Hint: Use also to perform side effects, like printing to the console, without affecting the result of the transformation.*/
+fun transformList2(list: List<Int>) = list.map {
+    (it * 2).also(::println)
+}
+
+// task 4
+/*
+Question: You have a Rectangle class with properties width and height.
+Write a function that uses with to calculate the area and perimeter of the rectangle and return both values as a pair.
+Hint: with is used for performing multiple operations on a single object.
+*/
+data class Rectangle(val width: Int, val height: Int)
+
+fun calculateRectangleAreaAndPerimeter(rectangle: Rectangle): Pair<Int, Int> = with(rectangle) {
+    val area = width * height
+    val perimeter = 2 * (width + height)
+    return area to perimeter
+}
+
+val rectangle = Rectangle(width = 5, height = 10)
+
 
 fun main() {
     println(transformList(numbers))
     println(demis)
     println(stringLength("Lavrentidis"))
     println(stringLength(""))
+    transformList2(numbers)
+    println(calculateRectangleAreaAndPerimeter(rectangle))
+
 }

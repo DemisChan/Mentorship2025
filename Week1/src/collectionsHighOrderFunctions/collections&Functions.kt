@@ -63,6 +63,41 @@ fun mergedAndSorted(list1: List<Int>, list2: List<Int>): List<Int> {
 }
 
 
+// My practice
+// Given a list of strings, create a new list containing the uppercase version of each string.
+val words = listOf("apple", "banana", "cherry")
+val wordsUppercase = words.map { it.uppercase() }
+
+// Given a list of Person objects (with name and age properties),
+// create a list containing only the names of the people.
+data class Person(val name: String, val age: Int)
+
+val people = listOf(
+    Person("Alice", 30),
+    Person("Bob", 25),
+    Person("Charlie", 35)
+)
+val names = people.map { it.name }
+
+// Given a list of numbers, calculate the average of the numbers using fold.
+val numbers3 = listOf(10, 20, 1, 40, 50)
+val avg = numbers3.fold(0) { acc, i -> acc + i.div(numbers3.size) }
+
+// Given a list of strings, create a single string that contains all the
+// strings concatenated, separated by spaces, but only include strings with length greater than 3.
+val words2 = listOf("cat", "dog", "elephant", "bird", "giraffe")
+val result = words2.filter { it.length> 3 }.fold("") { acc, i ->
+    acc.plus(i).plus(" ")
+}
+
+// Given a list of numbers, find the smallest number using reduce.
+val min = numbers3.reduce{acc, i -> if (acc < i) acc else i}
+
+// Given a list of strings, find the longest string using reduce
+val longestString = words2.reduce { acc, s -> if (acc.length > s.length) acc else s  }
+
+
+
 fun main() {
     // task 1
     println(removeDuplicates(numbers))
@@ -79,6 +114,14 @@ fun main() {
 
     //task 5
     println(mergedAndSorted(numbers, numbers2))
+
+    // Mine
+    println(wordsUppercase)
+    println(names)
+    println(avg)
+    println(result)
+    println(min)
+    println(longestString)
 }
 
 

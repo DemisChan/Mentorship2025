@@ -1,0 +1,32 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+
+# Build artifacts
+build/
+out/
+.gradle/
+target/
+
+# IDE and editor configuration
+.idea/
+*.iml
+.vscode/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Log files
+*.log
+
+# Sensitive information
+*.env
+secrets.txt
+
+# Temporary files
+*.tmp
+*.bak
+
+# User-specific files
+local.properties

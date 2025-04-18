@@ -2,8 +2,8 @@ plugins {
     kotlin("jvm") version "2.1.10"
 }
 
-group = "org.liana"
-version = "1.0-SNAPSHOT"
+group = "org.mentorship2025"
+version = "unspecified"
 
 repositories {
     mavenCentral()
@@ -17,5 +17,5 @@ tasks.test {
     useJUnitPlatform()
 }
 kotlin {
-    jvmToolchain(20)
+    jvmToolchain(11)
 }

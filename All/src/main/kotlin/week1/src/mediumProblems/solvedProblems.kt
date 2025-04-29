@@ -1,6 +1,6 @@
-package mediumProblems
+package org.mentorship2025.week1.src.mediumProblems
 
-import lambdasAndScopeFunctions.Person
+import org.mentorship2025.week1.src.lambdasAndScopeFunctions.Person
 
 /*Sum of List using fold: Write a function that takes a list of integers and uses
 the fold function to calculate the sum of all the elements in the list.*/

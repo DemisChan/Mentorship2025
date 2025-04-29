@@ -1,4 +1,4 @@
-package employeeManagmentSystem
+package org.mentorship2025.week1.src.employeeManagmentSystem
 
 open class Employee(val name: String, val id: Int, val salary: Double) {
     init {

@@ -1,4 +1,4 @@
-package collectionsHighOrderFunctions
+package org.mentorship2025.week1.src.collectionsHighOrderFunctions
 
 // create list of integers
 val numbers = listOf(3, 5, 3, 8, 9, 10, 7)

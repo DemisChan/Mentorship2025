@@ -1,4 +1,4 @@
-package studentGrading
+package org.mentorship2025.week1.src.studentGrading
 
 class Student(val name: String, private val grades: List<Int>) : Comparable<Student> {
 

@@ -1,4 +1,4 @@
-package lambdasAndScopeFunctions
+package org.mentorship2025.week1.src.lambdasAndScopeFunctions
 
 // task 1
 //Question: You have a list of integers: val numbers = listOf(1, 2, 3, 4, 5).

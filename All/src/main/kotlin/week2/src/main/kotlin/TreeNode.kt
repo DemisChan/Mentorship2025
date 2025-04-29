@@ -38,10 +38,16 @@ class TreeNode<T>(val value: T) {
 fun main() {
     val hot = TreeNode("Hot")
     val cold = TreeNode("Cold")
-    val beverages = TreeNode("Beverages").run {
+    val beverages = TreeNode("Beverages").apply {
         add(hot)
         add(cold)
     }
-
-
+    val coffe = TreeNode("Coffee")
+    val tea = TreeNode("Tea")
+    hot.run {
+        add(coffe)
+        add(tea)
+    }
+    println("Depth-first traversal:")
+    beverages.forEachDepthFirst { println(it.value) }
 }

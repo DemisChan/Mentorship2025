@@ -1,4 +1,4 @@
-package nullSafety
+package org.mentorship2025.week1.src.nullSafety
 
 // Task 1: Safe Property Access
 // Create a function that safely returns the length of a nullable string

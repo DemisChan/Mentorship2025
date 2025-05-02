@@ -79,10 +79,22 @@ fun maxValue(arr: IntArray, k: Int): List<Int> {
             result[i] = x.max()
             temp += 1
         }
-
     }
     return result.toList()
 }
+
+// kotlin way
+fun maxValueWindowed(arr: IntArray, k: Int): List<Int> {
+    if (arr.isEmpty() || k <= 0 || k > arr.size) {
+        return emptyList()
+    }
+
+    return arr.asSequence()
+        .windowed(size = k, step = 1)
+        .map { it.maxOrNull() ?: 0 }
+        .toList()
+}
+
 
 
 fun main() {
@@ -102,6 +114,7 @@ fun main() {
 
 
     println(maxValue(intArrayOf(1, 4, 2, 10, 2, 3, 1, 0, 20), 4))
+    println(maxValueWindowed(intArrayOf(1, 4, 2, 10, 2, 3, 1, 0, 20), 4))
     println(maxValue(intArrayOf(5, 4, 3, 2, 1), 3))
 
 }

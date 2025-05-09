@@ -1,8 +1,6 @@
 package org.mentorship2025
 
 import java.io.File
-import java.util.Vector
-import kotlin.concurrent.thread
 
 fun main() {
     val file = File("C:\\Users\\Gamer\\Downloads\\basedir\\basedir")

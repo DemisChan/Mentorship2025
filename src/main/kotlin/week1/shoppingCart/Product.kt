@@ -1,4 +1,4 @@
-package org.mentorship2025.week1.src.shoppingCart
+package org.mentorship2025.week1.shoppingCart
 
 data class Product(val name: String, val price: Double, val category: String)
 

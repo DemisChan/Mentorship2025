@@ -1,4 +1,4 @@
-package org.mentorship2025.week1.src.mediumProblems
+package org.mentorship2025.week1.mediumProblems
 
 import org.mentorship2025.week1.src.lambdasAndScopeFunctions.Person
 

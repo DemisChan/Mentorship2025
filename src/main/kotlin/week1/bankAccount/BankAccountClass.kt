@@ -1,4 +1,4 @@
-package org.mentorship2025.week1.src.bankAccount
+package org.mentorship2025.week1.bankAccount
 
 class BankAccountClass(val accountNumber: String, var balance: Double, val customerName: String) :
     SavingsAccount(interestRate = 0.0) {

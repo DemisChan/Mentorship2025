@@ -1,14 +1,10 @@
-package org.mentorship2025.week1.src.nullSafety
+package org.mentorship2025.week1.nullSafety
 
 // Task 1: Safe Property Access
 // Create a function that safely returns the length of a nullable string
 // Return 0 if the string is null
 fun getStringLength(str: String?): Int {
-    return if (str == null) {
-        0
-    } else {
-        str.length
-    }
+    return str?.length ?: 0
 }
 
 // Task 2: Elvis Operator Practice

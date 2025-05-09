@@ -1,7 +1,4 @@
-package org.mentorship2025.week2.src.main.kotlin
-
-import org.mentorship2025.week1.src.collectionsHighOrderFunctions.longestString
-import kotlin.math.abs
+package org.mentorship2025.week2
 
 /* Find the Missing Number in an Array
 Given an array containing n distinct numbers from 0 to n, find the missing number without using extra space.

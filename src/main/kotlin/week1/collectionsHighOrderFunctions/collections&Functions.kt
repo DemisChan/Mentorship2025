@@ -94,7 +94,7 @@ val result = words2.filter { it.length> 3 }.fold("") { acc, i ->
 val min = numbers3.reduce{acc, i -> if (acc < i) acc else i}
 
 // Given a list of strings, find the longest string using reduce
-val longestString = words2.reduce { acc, s -> if (acc.length > s.length) acc else s  }
+val longestString = words2.reduce { acc, s -> if (acc.length > s.length) acc else s }
 
 
 

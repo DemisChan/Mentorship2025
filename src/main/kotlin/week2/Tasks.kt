@@ -17,8 +17,7 @@ Write a function that takes a string containing ()[]{} and checks if the parenth
 */
 
 fun isBalanced(input: String): Boolean {
-    var boolean = true
-    val bytes = input.toByteArray()
+
     val br1 = input.count {
         it == '('
     }.compareTo(input.count {
@@ -91,6 +90,7 @@ fun maxValueWindowed(arr: IntArray, k: Int): List<Int> {
         .map { it.maxOrNull() ?: 0 }
         .toList()
 }
+
 
 
 

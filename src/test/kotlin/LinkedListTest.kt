@@ -1,7 +1,7 @@
-import org.junit.jupiter.api.Assertions.assertEquals
-import org.junit.jupiter.api.Assertions.assertFalse
-import org.junit.jupiter.api.Assertions.assertTrue
-import kotlin.test.Test
+import junit.framework.TestCase.assertEquals
+import junit.framework.TestCase.assertFalse
+import junit.framework.TestCase.assertTrue
+import org.junit.Test
 import kotlin.test.assertNull
 
 /**
@@ -10,11 +10,12 @@ import kotlin.test.assertNull
  */
 class LinkedListTest {
 
+
+
     @Test
     fun `test append to empty list`() {
         val linkedList = LinkedList()
         linkedList.append(5)
-
         assertEquals(1, linkedList.size)
         assertEquals(5, linkedList.head?.value)
         assertEquals(5, linkedList.tail?.value)
